@@ -1,0 +1,36 @@
+{
+  "name": "obj.getter",
+  "version": "0.0.1",
+  "author": "vimalakirti <vimalakirti409@gmail.com>",
+  "description": "Utility function to get a value corresponding to path of object.",
+  "keywords": ["getter", "pick", "pickBy", "at", "get", "path", "value", "object", "function"],
+  "source": "src/index.ts",
+  "main": "dist/getter.js",
+  "module": "dist/getter.esm.js",
+  "umd:main": "dist/getter.umd.js",
+  "unpkg": "dist/getter.umd.js",
+  "exports": {
+    ".": {
+      "require": "./dist/getter.js",
+      "import": "./dist/getter.modern.js",
+      "umd": "./dist/getter.umd.js"
+    }
+  },
+  "scripts": {
+    "build": "microbundle --no-sourcemap",
+    "test": "mocha test/index.js",
+    "postbuild": "yarn test",
+    "prepublish": "yarn build"
+  },
+  "devDependencies": {
+    "microbundle": "^0.14.2",
+    "mocha": "^9.2.0"
+  },
+  "homepage": "https://github.com/eden-space/obj.getter#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eden-space/obj.getter.git"
+  },
+  "files": ["dist"],
+  "license": "MIT"
+}
